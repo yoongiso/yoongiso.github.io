@@ -1,19 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>猜猜小狗在哪里？</title>
-</head>
-<body style="background-color:lavender">
-	<h1 align="center" style=color:purple;>找小狗</h1>
-  <p align="center">丽萨有一只可爱的小白狗。</p>
-  <p align="center">这天她回到家，发现小狗藏起来啦！</p>
-  <p align="center">你能帮丽萨找找她的可爱[小白狗]吗？</p>
-	<div align="center">
-		<img src="小狗.gif">
-	</div>
-  <center><button onclick="sayName()">点此开始寻找小狗</button></center>
-	<script src="找小狗.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>定福庄山海经</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <style type="text/css">
+    .navbar{background:#000;}
+  </style>
+  <body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" >
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="./img/logo.png" width=80px height=70px></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">肆拾捌</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">遇妖角</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">异物志</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">呼救亭</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./img/轮播1.png" class="d-block w-90" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>定福庄今日妖物志</h5>
+        <p>请确保你此时连接的是正确验证的校园网</p>
+        <button type="button" class="btn btn-outline-light">消息上传</button>
+        <button type="button" class="btn btn-outline-light">重新登录</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./img/轮播2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>定福庄校规今日更新</h5>
+        <p>校规汇总请在零点后刷新校园官网查看</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./img/轮播3.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>呼救亭今日正常营业</h5>
+        <p>下一次呼救亭关闭时间：8月23日</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<p></p>
+
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-12">
+    <h1 class="titleone">定福庄四方镇兽</h1>
+    <p></p>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <img src="./img/朱雀.png" width=200px height=200px>
+    <h4>朱雀</h4>
+    <p>其身覆火焰，终日不熄</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <img src="./img/白虎.png" width=200px height=200px>
+    <h4>白虎</h4>
+    <p>王者不暴虐，则白虎仁，不害物</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3" class="justify">
+    <img src="./img/玄武.png" width=200px height=200px>
+    <h4>玄武</h4>
+    <p>其色玄，神有鳞甲，见武象焉</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <img src="./img/青龙.png" width=230px height=200px>
+    <h4>青龙</h4>
+    <p>至仁至灵，角尾之间，赫乎明庭</p>
+    </div>
+  </div>
+  <hr class="my-4">
+</div>
+
+<div class="container-fluid">
+  <div class="row jumbotron">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+      <p></p>
+      <p class="lead">今日遇妖角[已更新]</p>
+      <p class="normal">[核桃林]-[麒麟]-考试周麒麟在四十八教周围出现属正常现场，同学们如有见到可停留许愿，不属于作弊违规。</p>
+      <p class="normal">[星光超市]-[上清童子]-近日上清童子做客我校，在校师生如进星光超市后有强烈购物欲属正常现象，校方不予退款，请各位保持理智，培养良好的消费观念。</p>
+      <p class="normal">[钢琴湖]-[丹虾]-丹虾目前仍处于繁衍期，请各位同学不要捕食，以保证秋季学期北苑虾品供应正常。</p>
+      <p class="normal">[国重大楼]-[水木精]-目前校方仍与其谈判中，如有同学颈部被其呼气请务必不要惊慌，校医院可免费救治；见之大喊其名即可驱之。</p>
+    </div>
+ <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+    <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">刷新</button></a>
+    </div>  
+  </div> 
+</div>
+<div>
+  <p></p>
+</div>
+    <div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-12">
+      <h1 class="titleone">定福庄妖物人气榜</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="card" >
+        <img class="card-img-top" src="./img/九尾.png" >
+        <div class="card-body" >
+          <h4 class="card-title">九尾狐</h4>
+          <p class="small"></p>
+          <p class="small">较为喜欢和人类交往，常以人形隐匿在师生之间，以捉弄长相俊美的人类为乐。<br/>
+          活跃地点：风雨操场、广告学院。<br/>
+          注意事项：<br/>1.严禁与九尾狐产生暧昧关系；<br/>2.不可触摸九尾狐的尾巴；<br/>3.如在校内寝室深夜听到小儿啼哭，请将情况汇报至学院辅导员，不可独自出门察看。
+          </p>
+          <div  align="center">
+          <a href="#" class="btn btn-outline-secondary" >投票</a>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src="./img/腾黄.png">
+        <div class="card-body">
+          <h4 class="card-title">腾黄</h4>
+          <p class="small"></p>
+          <p class="small">中国神话中的神兽，是吉祥的象征，常在月缺日在学校的上空奔腾。<br/>
+          活跃地点：大学生活动中心、新闻学院。<br/>
+          注意事项：<br/>1.腾黄是祥兽，但并不具备赐福的能力，考试之前摸腾黄的角不会改变分数。<br/>2.请勿骑乘腾黄，如有犯者后果自负。<br/>
+          3.可以在腾黄同意的情况下进行投食。
+          </p>
+          <div  align="center">
+          <a href="#" class="btn btn-outline-secondary">投票</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src="./img/陆吴.png">
+        <div class="card-body">
+          <h4 class="card-title">陆吴</h4>
+          <p class="small"></p>
+          <p class="small">曾经是黄帝的臣子，负责为黄帝看守帝下之都，因此对个人领地的占有欲很强。<br/>
+          活跃地点：44号楼、体育馆。<br/>
+          注意事项：<br/>1.请勿踏进校园地图中陆吴的领地。<br/>2.最好不要模仿陆吴的语气与你的女朋友交谈。<br/>
+          3.校内举行任何政治考试时，陆吾都将避免在校内出现，请摆正学习心态，不要琢磨歪门邪道。
+          </p>
+          <div  align="center">
+          <a href="#" class="btn btn-outline-secondary">投票</a>
+          </div>
+        </div>
+        </div>
+      </div>
+
+  
+        <div class="col-md-3">
+      <div class="card">
+           <img class="card-img-top" src="./img/鸟身龙首神.png" >
+        <div class="card-body" >
+          <h4 class="card-title">鸟身龙首神</h4>
+          <p class="small"></p>
+          <p class="small">鹊神。出现常伴有好运，得其羽毛者得大运气。<br/>
+          活跃地点：未知。<br/>
+          注意事项：<br/>1.不可强行拉扯鹊神的羽毛；<br/>2.鹊神偶尔会将自己的羽毛随机赠送在校师生，此属于个人财产，不必上交学校。<br/>3.鹊神喜吃谷物，有意向者可在枝叶茂密处设置谷物投放点，但请不要破坏学校原有设施。
+          </p>
+          <div  align="center">
+          <a href="#" class="btn btn-outline-secondary" >投票</a>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+<hr class="my-4">
+
+<figure>
+  <div class="fixed-wrap">
+    <div id="fixed">
+    </div>
+  </div>
+</figure>
+<button class="fun" data-toggle="collapse" data-target="#emoji">点击查看更多</button>
+
+<div id="emoji" class="collapse">
+  <div class="container-fluid">
+    <div class="row text-center">
+     <div class="col-sm-6 col-md-3">
+       <img class="ipg" src="./img/click1.png">
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <img class="ipg" src="./img/click2.png">
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <img class="ipg" src="./img/click1.png">
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <img class="ipg" src="./img/click4.png">
+     </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<hr class="my-4">
+
+
+<footer>
+<div class="container-fluid">
+  <div class="row text-center">
+    <h3>今日告示牌</h3>
+    <h6>[已更新]</h6>
+    <hr class="my-4">
+    <div class="col-md-4">
+      <h6>今日禁行区</h6>
+      <hr class="light">
+      <p></p>
+      <p>16:00-18:00 钢琴湖</p>
+      <p>17:00-20:30 国重七楼</p>
+      <p>21:00-22:15 南操东北角</p>
+      <p>23:00-24:00 明德楼304室</p>
+    </div>
+    <div class="col-md-4">
+      <h6>呼救亭今日值班人员</h6>
+      <hr class="light">
+      <p></p>
+      <p>新闻学院：白老师</p>
+      <p>保卫处：李队长</p>
+      <p>贵宾位：宋无忌、麒麟</p>
+    </div>
+    <div class="col-md-4">
+      <h6>昨日新增处分人员</h6>
+      <hr class="light">
+      <p></p>
+      <p>20级杜某-饲养肉芝</p>
+      <p>21级王某-捕食丹虾</p>
+      <p>20级王某-采摘怀梦草</p>
+      <p>19级刘某-逗弄卢亭</p>
+    </div>
+    <div class="col-12">
+      <h7>&copy;DFZyuyaojiao.com</h7>
+</div>
+</footer>
 </body>
 </html>
